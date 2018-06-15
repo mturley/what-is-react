@@ -1,6 +1,6 @@
 {
   "name": "what-is-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An attempt to make React concepts accessible to both technical and non-techincal folks.",
   "main": "index.js",
   "scripts": {
