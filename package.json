@@ -1,0 +1,19 @@
+{
+  "name": "what-is-react",
+  "version": "1.0.0",
+  "description": "An attempt to make React concepts accessible to both technical and non-techincal folks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mturley/what-is-react.git"
+  },
+  "author": "mturley@redhat.com",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/mturley/what-is-react/issues"
+  },
+  "homepage": "https://github.com/mturley/what-is-react#readme"
+}
