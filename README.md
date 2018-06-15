@@ -1,4 +1,13 @@
-# Spectacle Boilerplate
+# What is React?
+
+A humble attempt to make React concepts accessible to both technical and non-techincal folks.
+
+**A talk by [Mike Turley](https://github.com/mturley) for Red Hat UXD**
+
+
+## TODO
+
+This is a slide deck in progress. I'll publish it soon. The below contents are copied from spectacle-boilerplate.
 
 ## Contents
 
