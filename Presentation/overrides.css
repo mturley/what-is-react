@@ -1,0 +1,41 @@
+
+blockquote.smaller > span {
+  font-size: 4rem;
+}
+
+ul.ellipsis li {
+  list-style: none;
+}
+
+ul.hanging-indent li {
+  padding-left: 1.35em;
+  text-indent: -1.35em;
+  margin-bottom: 30px;
+}
+
+ul.hanging-indent.ellipsis li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.imperative:not(.highlight) {
+  color: #C3272B;
+}
+
+.functional:not(.highlight), .declarative:not(.highlight) {
+  color: #36D7B7;
+}
+
+.functional.highlight, .declarative.highlight, .imperative.highlight {
+  background-color: #36D7B7;
+  padding: 0px 4px;
+}
+
+.imperative.highlight {
+  background-color: #C3272B;
+}
+
+ul li.tiny {
+  font-size: 24px;
+  padding-top: 10px;
+}

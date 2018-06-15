@@ -1,9 +1,5 @@
-// TODO fill in __STATISTIC__s and __CITATION__s
-
-// Import React
 import React from 'react';
 
-// Import Spectacle Core tags
 import {
   BlockQuote,
   Cite,
@@ -13,10 +9,10 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  CodePane
 } from 'spectacle';
 
-// Import theme
 import createTheme from 'spectacle/lib/themes/default';
 import 'normalize.css';
 import './overrides.css';
@@ -56,7 +52,7 @@ const Presentation = () => (
       <Text textColor="tertiary" {...inline}>by Mike Turley</Text>
     </Slide>
 
-    {/* 2 - "React is sych a good idea that..." */}
+    {/* 2 - Quote: "React is such a good idea that..." */}
     <Slide transition={['fade']} bgColor="secondary" textColor="primary">
       <BlockQuote className="smaller">
         <Quote>React is such a good idea that we will spend the rest of the decade continuing to explore its implications and applications.</Quote>
@@ -64,97 +60,176 @@ const Presentation = () => (
       </BlockQuote>
     </Slide>
 
-    {/* 2 - Why is React such a good idea? */}
-    <Slide transition={['fade']} bgColor="primary" textColor="secondary">
-      <Heading size={3} caps lineHeight={1} textColor="secondary">
+    {/* 3 - Why is React such a good idea? Abstraction. */}
+    <Slide transition={['fade']} bgColor="secondary" textColor="primary">
+      <Heading size={3} caps lineHeight={1} textColor="primary">
         Why is React<br />
         such a good idea?
       </Heading>
-      <Text margin="100px 0 0" textColor="tertiary" fit {...inline}>
+      <Heading size={2} margin="100px 0 0" textColor="tertiary">
         One Word:
-      </Text>
+      </Heading>
       <Text size={1} fit textColor="quarternary" {...inline}>
-        Abstraction.
+        <em>Abstraction.</em>
       </Text>
-      <Text margin="50px 0 0" textColor="secondary" size={1} fit>
-        Developers don't have to work as hard<br />
-        to accomplish the same goals.
+      <Text margin="50px 0 0" textColor="primary" size={1} fit>
+        In other words,<br />
+        <strong>developers don't need to work as hard 👩‍💻</strong><br />
+        <strong>to achieve the same goals. 🎉</strong>
       </Text>
     </Slide>
 
-    {/* 1 - What is React? */}
+    {/* 4 - React is... */}
     <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
-      <Heading size={6} textColor="secondary" caps>React is...</Heading>
-      <List>
-        <ListItem>A JavaScript Framework for making <strong>User Interfaces</strong> (not just web apps).</ListItem>
+      <Heading size={2} margin="-150px 0 0" textColor="secondary" caps>React...</Heading>
+      <List className="hanging-indent ellipsis">
+        <ListItem>... is a JavaScript Framework for making <strong>User Interfaces</strong> (not just web apps)</ListItem>
         <ListItem>
-          A paradigm shift from <strong className="imperative">imperative</strong> to
-          <strong className="declarative">declarative</strong> and <strong className="functional">functional</strong> programming
+          ... promotes <strong className="declarative">📝&nbsp;declarative</strong> and <strong className="functional">➡️&nbsp;functional</strong> programming patterns
         </ListItem>
-        <ListItem>Not the only one (<strong>Vue</strong> is pretty cool too), but the "best" implementation so far of a this new paradigm.</ListItem>
-        <ListItem>A way to not ever think about DOM manipulation again.</ListItem>
-        <ListItem>Item 3</ListItem>
-        <ListItem>Item 4</ListItem>
+        <ListItem>
+          ... finally makes <strong className="imperative">🗣️ imperative programming</strong> for the web <strong className="imperative">🙅‍♂️ obsolete</strong>!
+          <List>
+            <ListItem className="tiny">
+              Yes, this means jQuery. <small><small>And some parts of Angular...</small></small>
+            </ListItem>
+          </List>
+        </ListItem>
+        <ListItem bold>
+          ... is empowering!
+          <List>
+            <ListItem className="tiny" bold={false}>
+              It is not much of a stretch if you understand HTML, to understand JSX and add some logic.
+            </ListItem>
+          </List>
+        </ListItem>
+        <ListItem bold>
+          ... is not the only <span className="declarative">declarative</span> UI framework!
+          <List>
+            <ListItem className="tiny" bold={false}>
+              Vue is pretty cool too, and Web Components are promising.
+            </ListItem>
+          </List>
+        </ListItem>
+        <ListItem>... is <strong className="declarative">simple</strong> but powerful.</ListItem>
+        <ListItem>... has a rapidly growing community.</ListItem>
       </List>
     </Slide>
 
-    {/* "Document with behavior" code vs "Document code" + "Behavior code" */}
+    {/* 5 - Everyone is switching to React right now. */}
+    <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
+      <Heading size={4} margin="-120px 0 0" textColor="secondary" caps>Everyone is switching to React right now.</Heading>
+      <List className="hanging-indent">
+        <ListItem>
+          According to the Stack Overflow 2017 Developer Survey, <strong className="declarative"s>React is loved by 67% of surveyed developers</strong> and
+          AngularJS by <strong>52%</strong>.
+        </ListItem>
+        <ListItem>
+          <span className="imperative">“No interest to continue developing” registers higher numbers for AngularJS (48%)</span> vs. React (33%). 
+        </ListItem>
+        <ListItem>
+          The Office 365 team at Microsoft recently announced that they are <span className="declarative">rewriting MS Office in React-Native.</span>
+          <List>
+            <ListItem className="tiny">And they just bought GitHub, so...</ListItem>
+          </List>
+        </ListItem>
+        <ListItem>
+          Facebook, Netflix, WhatsApp, Dropbox, The New York Times, Khan Academy...
+          <span className="declarative">The list goes on and on.</span>
+        </ListItem>
+      </List>
+    </Slide>
 
-    {/* The future is declarative markup. It might not be React, but it will be better than HTML. */}
-
-    {/*
-      JSX is like Handlebars with Brains
-    */}
-
-    {/*
-      Quick Context --- The simplest concept in Programming
-      "What is a Function?"
-      A repeatable set of instructions with inputs and outputs
-    */}
-
-    {/* 
-      Props and Pure Components ("It's just a function")
-      Components = function (props+state => HTML*)
-      * it's not really HTML-- more on that later
-    */}
-
-    {/*
-      State ("it's just props that can change")
-    */}
-
-    {/*
-      Composition vs Inheritance?
-      (TODO LATER-- not for lightning talk)
-    */}
-
-    {/*
-      Fact: Supporting multiple frameworks means we have many copies of our HTML floating around, in many flavors. Copied, pasted, tweaked. Diverged HTML.
-    */}
-
-    {/*
-      React was invented in 2013. In the 5 years since then:
-      * The React community has grown __STATISTIC__% larger than the Angular and jQuery communities combined
-      * Facebook has rewritten everything in React (of course)
-      * Microsoft is rewriting all of Office 365 in React-Native (__CITATION__)
-      * More Impressive Things?
-    */}
-
-    {/*
-      Declarative + Functional is the Future
-      Red Hat wants to be the defining technology company of its time?
-      **React is defining the future of user interfaces right now.**
-      Red Hat and Patternfly need to embrace React and get on top of that gravy train.
-    */}
-    
-
+    {/* 6 - Core Concept: Declarative Programming */}
     <Slide transition={['fade']} bgColor="tertiary">
-      <Heading size={6} textColor="primary" caps>Typography</Heading>
-      <Heading size={1} textColor="secondary">Heading 1</Heading>
-      <Heading size={2} textColor="secondary">Heading 2</Heading>
-      <Heading size={3} textColor="secondary">Heading 3</Heading>
-      <Heading size={4} textColor="secondary">Heading 4</Heading>
-      <Heading size={5} textColor="secondary">Heading 5</Heading>
-      <Text size={6} textColor="secondary">Standard text</Text>
+      <Heading size={6} textColor="primary" caps margin="-50px 0 0">Core Concept:</Heading>
+      <Heading fit textColor="secondary">Declarative Programming</Heading>
+      <Text size={6} textColor="primary" margin="50px 0 0" bold>
+        In React, you <span className="declarative highlight">declare</span> what your app should look like at any one time as a <span className="declarative highlight">function of the available data</span>.
+      </Text>
+      <Text size={6} textColor="primary" margin="50px 0 0" bold>
+        When that data changes, your app <strong className="declarative highlight"><u>react</u>s</strong> to those changes automatically!
+      </Text>
+      <Text size={6}>
+        (get it?)
+      </Text>
+      <Text margin="50px 0 0">
+        <strong>You declare the end result you want, and React figures out the rest for you.</strong><br />
+        You never have to think about manipulating HTML elements at all.<br />
+        <strong className="declarative highlight">It's all automatic.</strong>
+      </Text>
+    </Slide>
+
+    {/* 7 - Core Concept: Functional Programming */}
+    <Slide transition={['fade']} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps>Core Concept:</Heading>
+      <Heading textColor="secondary" fit>Functional Programming</Heading>
+      <Text size={6} textColor="primary" margin="50px 0 0" bold>
+        A <strong class="functional highlight">function</strong> is a <u>set of repeatable instructions</u> that take some <span className="functional highlight">input</span> and return some <span className="functional highlight">output</span>.
+      </Text>
+      <Text size={6} textColor="primary" margin="50px 0 0" bold>
+        A <strong class="functional highlight">pure function</strong> is a function with no <span className="imperative highlight">side effects</span>.
+      </Text>
+      <Text>
+        (It just outputs, without modifying anything outside of itself.)
+      </Text>
+      <CodePane textSize={32} lang="javascript" source={`
+        function sum(a, b) { return a + b; }
+        sum(2, 5); // returns 7
+      `} />
+    </Slide>
+
+    {/* 8 - Declaring the state of the world with Props */}
+    <Slide transition={['fade']} bgColor="tertiary">
+      <Heading size={6} textColor="primary" caps margin="-250px 0 0">Declaring things in React:</Heading>
+      <Heading textColor="secondary">Props</Heading>
+      <Text size={6} textColor="primary" margin="50px 0 0" bold>
+        <strong class="declarative highlight">A React Component is just a function</strong> that takes <strong className="declarative highlight">props</strong> as input, and returns HTML elements as output.
+      </Text>
+      <Text size={6} textColor="primary" margin="50px 0 0">
+        The props (arbitrary properties) declare the state of the world for a component. When the props change, a component <strong>renders itself again.</strong> React figures out how to do this efficiently for you.
+      </Text>
+      <CodePane lang="javascript" textSize={22} margin="50px 0 0" source={`
+        function MyComponent(props) {
+          return (
+            <h1 className={props.color}>
+              Welcome, {props.username}!
+            </h1>
+          );
+        }
+
+        MyComponent({ color: 'blue', username: 'Mike' });
+        // returns <h1 class="blue">Welcome, Mike!</h1>
+
+        // JSX syntax for props:
+        <MyComponent color="blue" username="Mike" />
+      `} />
+    </Slide>
+
+    {/* 9 - The future is here */}
+    <Slide transition={['zoom']} bgColor="primary">
+      <Heading size={2} caps lineHeight={1} textColor="secondary">
+        <span className="declarative">Declarative + Functional</span> UI is the Future,<br />and it's here.
+      </Heading>
+      <Text margin="50px 0 0" textColor="secondary">
+        React aren't the only ones doing it, but they are doing it best. React is defining the future of user interfaces right now.
+      </Text>
+      <Heading size={6} margin="50px 0 0" textColor="tertiary">
+        If Red Hat wants to be the defining technology company of its time, we need to embrace React and climb aboard the declarative gravy train.
+      </Heading>
+    </Slide>
+
+    {/* 10 - Questions */}
+    <Slide transition={['zoom']} bgColor="primary">
+      <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+        Thank You!
+      </Heading>
+      <Text margin="50px 0 0" textColor="tertiary">
+        There will be a whole lot more interesting React stuff coming soon.
+      </Text>
+      <Text size={2} margin="50px 0 0" textColor="tertiary" fit bold>
+        Questions?
+      </Text>
     </Slide>
 
   </Deck>
